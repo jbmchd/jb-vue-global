@@ -1,5 +1,5 @@
-import componentes from "@jbmchd/jb-v-global/componentes";
-import jb_functions from "@jbmchd/jb-v-global/functions";
+import componentes from "@jbmchd/jb-vue-global/componentes";
+import jb_functions from "@jbmchd/jb-vue-global/functions";
 
 export default {
   showError({ dispatch }, options) {

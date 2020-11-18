@@ -9,10 +9,11 @@ const axios_config = {
   init() {
     Vue.use(VueAxios, axios);
     Vue.axios.defaults.baseURL = Vue.env.API_BASE_URL;
+    Vue.axios.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest"
   },
 
-  getResource(resource = null) {
-    let scope = Vue.env.API_BASE_URL_SCOPE
+  getResource(resource = null, with_scope = true) {
+    let scope = with_scope ? Vue.env.API_BASE_URL_SCOPE : ''
     return [scope, resource].join("/");
   },
 
